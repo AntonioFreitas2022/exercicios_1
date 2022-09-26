@@ -45,9 +45,10 @@ for n in range(0, len(sentence)):
         vogal_counter += 1  # Existe alguma forma de fazer com que seja igual a todas estas condições?
     if str.isupper(list_frase[n]):
         uppercase_counter +=1
-    if not str.isupper(list_frase[n]):
+    if not str.isupper(list_frase[n]) and list_frase[n] !=' ' and list_frase[n] != list_num:
         lowercase_counter +=1
 
 print(list_frase)
-print(
-    f'characteres frase= {comprimento_frase} palavras na frase= {palavras_frase} vogais na frase= {vogal_counter} numeros na frase= {num_counter} frase invertida= {sentence_invert} maisculas na palavras = {uppercase_counter} minusculas na palavras = {lowercase_counter}')
+print(f'characteres frase= {comprimento_frase} palavras na frase= {palavras_frase} '
+      f'vogais na frase= {vogal_counter} numeros na frase= {num_counter} frase invertida= {sentence_invert} '
+      f'maisculas na palavras = {uppercase_counter} minusculas na palavras = {lowercase_counter-num_counter}')
