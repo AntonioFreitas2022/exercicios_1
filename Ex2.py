@@ -32,6 +32,7 @@ for x in range(0, comprimento_frase):
 
 for n in range(0, len(sentence)):
     list_frase.append(sentence[n])
+
     vogal_checker = list_frase[n]
 
     for num_checker in list_num:
