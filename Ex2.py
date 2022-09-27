@@ -24,9 +24,10 @@ list_frase = []
 list_num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 sentence_invert = ''
-x = len(sentence)
+
 
 for x in range(0, comprimento_frase):
+
     sentence_invert = sentence[x] + sentence_invert
     # n_invert = str(n_invert + n[x])
 
@@ -41,7 +42,7 @@ for n in range(0, len(sentence)):
             num_counter += 1
             break
 
-    if vogal_checker == 'a' or vogal_checker == 'e' or vogal_checker == 'i' or vogal_checker == 'o' or vogal_checker == 'u':
+    if vogal_checker == 'a' or vogal_checker == 'e' or vogal_checker == 'i' or vogal_checker == 'o' or vogal_checker == 'u' or vogal_checker == 'U' or vogal_checker == 'O' or vogal_checker == 'I' or vogal_checker == 'E' or vogal_checker == 'A':
         vogal_counter += 1  # Existe alguma forma de fazer com que seja igual a todas estas condições?
     if str.isupper(list_frase[n]):
         uppercase_counter +=1

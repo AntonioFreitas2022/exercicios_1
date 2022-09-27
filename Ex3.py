@@ -6,6 +6,8 @@ Pergunte ao utilizador qual é o intervalo para obter numeros aleatórios
 Nota: Parece que afinal o numero de numeros aleatorios não era o intervalo e simplesmente e não estava definido
 O professor indicou que seria geralmente impossivel sem definir este problema.
 Tambem indicou que existe situaçoes qu não temos toda a informaçao, e que e importante identificar
+Logo:
+Pergunte quantos numeros quer
 
 Pergunte se deseja ver apenas pares, apenas impares ou apenas primos
 Mostre todos os números aleatórios

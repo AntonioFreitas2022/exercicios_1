@@ -7,4 +7,53 @@ Após o utilizador ter inserido os 5 valores apresente:
 - O menor valor inserido assim como as respectivas ilhas
 - O maior valor inserido assim como as respectivas ilhas
 - A média das vendas
+
+
+
 """
+
+n_min = 0
+n_max = 0
+total_vendas = 0
+contador = 0
+
+posicao_ilha_max = 0
+posicao_ilha_min = 0
+#Definir variaveis fora das outras funçoes, declara-as como globais
+
+def min_max_vendas(n_min, n_max,posicao_ilha_max,posicao_ilha_min):
+
+    for a in range(0, n):
+        if a == 0:
+            n_max = list_vendas[0]   #Aqui o erro foi o facto de não estares a usar o valor de a, estavas a usar o valor
+            n_min = list_vendas[0]   # x, como este valor é fixo, porque a operaçao 'for' já acabou pela altura que vais
+        if list_vendas[a] > n_max:   # usar esta função, logo só estavas a usar um único valor fixo, enquanto o valor de a
+            n_max = list_vendas[a]
+            posicao_ilha_max = a                    # passa pela lista completa e faz a comparação devidamente
+        if list_vendas[a] < n_min:      #Nota o len de uma lista diz o numero de elementos na lista
+            n_min = list_vendas[a]
+            posicao_ilha_min = a #Isto indica qual a posição do min/max
+
+    return n_max,n_min,posicao_ilha_max,posicao_ilha_min
+
+
+list_vendas = []
+list_ilhas = []
+n = int(input('Inserir numero de vendas distintas'))
+
+for x in range(0, n):
+    vendas = int(input('Inserir valores'))
+    ilhas = str(input('Inserir ilhas'))
+    total_vendas = total_vendas + vendas
+    #list_vendas.append(vendas = int(input('Inserir valores')))
+    # isto aqui tambem funciona para nao ter que criar multiplas variavveis
+    list_vendas.append(vendas)
+    list_ilhas.append(ilhas)
+
+n_max,n_min,posicao_ilha_max,posicao_ilha_min = min_max_vendas(n_min, n_max,posicao_ilha_max,posicao_ilha_min)
+print(f'minimo foi {n_min} na ilha {list_ilhas[posicao_ilha_min]} maximo foi {n_max} na ilha {list_ilhas[posicao_ilha_max]}')
+print(min_max_vendas(n_min,n_max,posicao_ilha_max,posicao_ilha_min))
+print(list_vendas)
+print(list_ilhas)
+print(f'A média das vendas é {total_vendas / n}')
+print(f'O total das vendas é {total_vendas}')
