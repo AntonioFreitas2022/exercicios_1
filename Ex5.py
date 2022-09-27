@@ -1,3 +1,4 @@
+
 """
 Peça ao utilizador para inserir uma frase
 Após o utilizador ter inderido a frase apresente:
@@ -22,19 +23,27 @@ uppercase_counter = 0
 sentence = input('Inserir frase')
 comprimento_frase = len(sentence)
 palavras_frase = len(sentence.split(' '))
+palavras_separadas = sentence.split(' ')
+
+
+list_palavras = []
 
 list_frase = []
 list_num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 sentence_invert = ''
+palavra_invert = ''
 
-#inverter cada uma das palavras na frase
+# inverter cada uma das palavras na frase
+for y in range(0 ,palavras_frase):
+    # sentence_invert = sentence[x] + sentence_invert
+    list_palavras.append(palavras_separadas[y])
+    for y1 in range(0, len(list_palavras[y])):
+        palavra_invert =  (palavras_separadas[y1]) + palavra_invert
 
+    print(palavra_invert)
 
-
-
-
-#inverter as maisculas por minusculas na frase, e minusculas por maisculas na frase
+# inverter as maisculas por minusculas na frase, e minusculas por maisculas na frase
 
 
 
@@ -72,4 +81,4 @@ for n in range(0, len(sentence)):
 print(list_frase)
 print(f'characteres frase= {comprimento_frase} palavras na frase= {palavras_frase} '
       f'vogais na frase= {vogal_counter} numeros na frase= {num_counter} frase invertida= {sentence_invert} '
-      f'maisculas na palavras = {uppercase_counter} minusculas na palavras = {lowercase_counter-num_counter}')
+      f'maisculas na palavras = {uppercase_counter} minusculas na palavras = {lowercase_counter -num_counter}')
