@@ -41,8 +41,7 @@ for y in range(0, palavras_frase):
 
     for a in range(0, len(list_palavras[y])):
         palavra_actual = list_palavras[y]
-        palavra_invert = palavra_actual[
-                             a] + palavra_invert  # Aqui eu quero inverter o cada uma das palavras mas em ordem. COnsigo trocar a ordem das palavras, mas não estou a conseguir inverter a palavra em si
+        palavra_invert = palavra_actual[a] + palavra_invert  # Aqui eu quero inverter o cada uma das palavras mas em ordem. COnsigo trocar a ordem das palavras, mas não estou a conseguir inverter a palavra em si
     str(list_palavras_invert.append(' ' + palavra_invert))
     palavra_invert = ''
 # inverter as maisculas por minusculas na frase, e minusculas por maisculas na frase

@@ -26,7 +26,10 @@ def min_max_vendas(n_min, n_max,posicao_ilha_max,posicao_ilha_min):
     for a in range(0, n):
         if a == 0:
             n_max = list_vendas[0]   #Aqui o erro foi o facto de não estares a usar o valor de a, estavas a usar o valor
-            n_min = list_vendas[0]   # x, como este valor é fixo, porque a operaçao 'for' já acabou pela altura que vais
+            n_min = list_vendas[0]
+            posicao_ilha_max = a
+            posicao_ilha_min = a
+            # x, como este valor é fixo, porque a operaçao 'for' já acabou pela altura que vais
         if list_vendas[a] > n_max:   # usar esta função, logo só estavas a usar um único valor fixo, enquanto o valor de a
             n_max = list_vendas[a]
             posicao_ilha_max = a                    # passa pela lista completa e faz a comparação devidamente
